@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.Toastify__toast {
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.Toastify__toast--success {
+  background-color: #059669;
+}
+
+.Toastify__toast--error {
+  background-color: #DC2626;
+}
+
+.bid-history li:nth-child(even) {
+  background-color: #f9fafb;
+  padding: 8px;
+  border-radius: 4px;
+}
