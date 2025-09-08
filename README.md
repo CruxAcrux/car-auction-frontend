@@ -5,7 +5,6 @@ A modern car auction platform frontend built with React, TypeScript, and Tailwin
 ![React](https://img.shields.io/badge/React-18.3.1-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.1-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
 
 ## Features
 - **Responsive UI**: Clean, modern design with mobile-friendly navigation
