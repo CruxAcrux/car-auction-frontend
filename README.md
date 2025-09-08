@@ -1,54 +1,161 @@
-# React + TypeScript + Vite
+# Car Auction Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern car auction platform frontend built with React, TypeScript, and Tailwind CSS. It allows users to browse, create, and bid on car ads with real-time updates. This repository contains only the frontend; the backend is hosted in a separate repository.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-18.3.1-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.1-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **Responsive UI**: Clean, modern design with mobile-friendly navigation
+- **Car Ad Management**: Create, edit, and delete car ads with image uploads
+- **Bidding System**: Place bids on auction-style listings
+- **Fixed-Price Purchases**: Buy cars instantly at fixed prices
+- **Search and Filtering**: Advanced filtering by brand, model, price, and features
+- **User Authentication**: Secure login and registration
+- **Image Galleries**: Interactive carousels for viewing vehicle images
 
-## Expanding the ESLint configuration
+## Technologies Used
+- **React 18.3.1** - Component-based UI library
+- **TypeScript 5.4** - Type-safe JavaScript development
+- **Tailwind CSS 3.4.1** - Utility-first CSS framework
+- **React Router 6.22.3** - Client-side routing
+- **React Query 5.29.2** - Server state management
+- **React Hook Form 7.51.1** - Form handling with validation
+- **Axios 1.6.8** - HTTP client for API requests
+- **React Toastify 10.0.5** - Notification system
+- **Framer Motion 11.0.20** - Animation library
+- **React Icons 5.0.1** - Icon library
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Prerequisites
+To run the Car Auction frontend, ensure you have the following installed:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Software and Tools
+- **Node.js**:
+  - Version: 18.x or later
+  - Install: [nodejs.org](https://nodejs.org/en/download/)
+  - Verify:
+    ```bash
+    node --version
+    ```
+
+- **npm**:
+  - Version: 9.x or later
+  - Verify:
+    ```bash
+    npm --version
+    ```
+
+- **Backend API**:
+  - The frontend requires a running Car Auction backend API at `http://localhost:5064`
+  - See the [Car Auction API repository](https://github.com/CruxAcrux/car-auction-api) for backend setup
+
+## Installation
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/CruxAcrux/car-auction-frontend.git
+   cd car-auction-frontend
+   ```
+
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+   - Installs React, TypeScript, Tailwind CSS, and other dependencies listed in `package.json`
+
+3. **Environment Configuration**:
+   Create a `.env` file in the project root:
+   ```env
+   VITE_API_URL=http://localhost:5064
+   ```
+   - Replace with your backend API URL if different
+
+## Running the Frontend
+
+1. **Start the Development Server**:
+   ```bash
+   npm run dev
+   ```
+   - Runs the app at `http://localhost:5173`
+
+2. **Access the Application**:
+   Open `http://localhost:5173` in your browser
+
+3. **Build for Production**:
+   ```bash
+   npm run build
+   ```
+   - Creates optimized production build in `dist` folder
+
+## Project Structure
+```
+src/
+├── components/          # Reusable UI components
+│   ├── Navbar.tsx      # Navigation header
+│   ├── Footer.tsx      # Site footer
+│   ├── CarAdCard.tsx   # Car ad preview card
+│   └── ImageCarousel.tsx # Image gallery component
+├── pages/              # Page components
+│   ├── Home.tsx        # Landing page with car listings
+│   ├── CarAdDetail.tsx # Individual car ad page
+│   ├── CreateAd.tsx    # Create new ad form
+│   ├── EditAd.tsx      # Edit existing ad form
+│   ├── MyListings.tsx  # User's own listings
+│   ├── Login.tsx       # Authentication page
+│   └── Register.tsx    # User registration
+├── hooks/              # Custom React hooks
+├── utils/              # Utility functions
+├── types/              # TypeScript type definitions
+└── services/           # API service functions
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Key Components
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Navigation
+- **Navbar**: Responsive navigation with mobile menu
+- **Footer**: Site links and information
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### Car Ad Components
+- **CarAdCard**: Displays car preview with image, price, and basic info
+- **ImageCarousel**: Interactive image gallery with thumbnails
+- **BidForm**: Form for placing bids on auction listings
+
+### Pages
+- **Home**: Main landing page with search and car listings
+- **CarAdDetail**: Detailed view of individual car ads
+- **CreateAd/EditAd**: Forms for managing car listings
+- **MyListings**: User's personal car advertisements
+
+## API Integration
+The frontend communicates with the backend API using Axios. Key endpoints include:
+
+- **Authentication**: `/api/Account/register`, `/api/Account/login`
+- **Car Ads**: `/api/CarAd`, `/api/CarAd/search`, `/api/CarAd/{id}`
+- **Bidding**: `/api/Bid`, `/api/Bid/carAd/{carAdId}`
+- **Brands/Models**: `/api/CarAd/brands`
+
+## Configuration
+Update `src/services/api.ts` with your backend configuration:
+```typescript
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5064';
 ```
+
+## Deployment
+
+### Netlify
+1. Build the project: `npm run build`
+2. Drag and drop the `dist` folder to Netlify
+3. Set environment variables in Netlify dashboard
+
+### Vercel
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run: `vercel`
+3. Follow the deployment prompts
+
+## Known Issues
+- **Image Upload**: Large images may require compression before upload
+- **Bid Validation**: Ensure backend is running for real-time bid validation
+- **Mobile Safari**: Some animations may behave differently on iOS devices
+
