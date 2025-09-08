@@ -1,10 +1,13 @@
 # Car Auction Frontend
 
-A modern car auction platform frontend built with React, TypeScript, and Tailwind CSS. It allows users to browse, create, and bid on car ads with real-time updates. This repository contains only the frontend; the backend is hosted in a separate repository.
+A frontend application for a car auction platform built with React and TypeScript. Users can browse vehicle listings, place bids, and manage their own advertisements. This is the frontend component that works with a separate backend API.
 
 ![React](https://img.shields.io/badge/React-18.3.1-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.1-blue)
+
+![Chat Preview](https://imgur.com/KIlHMBb.png)
+![Chat Preview](https://imgur.com/oCHZ7eT.png)
 
 ## Features
 - **Responsive UI**: Clean, modern design with mobile-friendly navigation
