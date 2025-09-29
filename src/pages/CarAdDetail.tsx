@@ -14,7 +14,7 @@ interface BidFormData {
 
 function CarAdDetail() {
   const { id } = useParams<{ id: string }>();
-  const { isAuthenticated, userId } = useAuthStore();
+  const { isAuthenticated } = useAuthStore(); // Removed userId
   const { register, handleSubmit, reset, formState: { errors } } = useForm<BidFormData>();
 
   const { data: carAd, isLoading: adLoading, error: adError } = useQuery<CarAd, Error>({
