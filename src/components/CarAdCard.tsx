@@ -6,7 +6,7 @@ interface CarAdCardProps {
 }
 
 function CarAdCard({ ad }: CarAdCardProps) {
-  const baseUrl = 'http://localhost:5064';
+  const baseUrl = 'http://46.62.175.8/api';
   const imageUrl = ad.imageUrls && ad.imageUrls[0] ? `${baseUrl}${ad.imageUrls[0]}` : 'https://via.placeholder.com/300x200?text=No+Image';
 
   return (

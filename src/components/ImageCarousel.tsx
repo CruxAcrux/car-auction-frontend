@@ -8,7 +8,7 @@ interface ImageCarouselProps {
 
 function ImageCarousel({ images }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const baseUrl = 'http://localhost:5064';
+  const baseUrl = 'http://46.62.175.8/api';
   const imageUrl = images[currentIndex] ? `${baseUrl}${images[currentIndex]}` : 'https://via.placeholder.com/600x400?text=No+Image';
 
   const handlePrev = () => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
