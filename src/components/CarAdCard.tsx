@@ -6,9 +6,11 @@ interface CarAdCardProps {
 }
 
 function CarAdCard({ ad }: CarAdCardProps) {
-  const baseUrl = 'http://46.62.175.8/api';
+  // Change to relative path or HTTPS
+  const baseUrl = '/api'; // ← CHANGE TO THIS
   const imageUrl = ad.imageUrls && ad.imageUrls[0] ? `${baseUrl}${ad.imageUrls[0]}` : 'https://via.placeholder.com/300x200?text=No+Image';
 
+  
   return (
     <Link
       to={`/car-ad/${ad.id}`}

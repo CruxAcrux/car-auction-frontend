@@ -4,7 +4,7 @@ import type { AuthResponse, Bid, BidForm, CarAd, CarBrand, CarModel, LoginForm, 
 import { useAuthStore } from '../store/authStore';
 
 const api = axios.create({
-  baseURL: 'http://46.62.175.8/api',
+  baseURL: '/api', // ← CHANGE TO THIS
   headers: {
     'Content-Type': 'application/json',
   },
