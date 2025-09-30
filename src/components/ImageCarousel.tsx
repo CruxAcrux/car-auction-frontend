@@ -8,10 +8,9 @@ interface ImageCarouselProps {
 
 function ImageCarousel({ images }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  // Change to relative path or HTTPS
-  const baseUrl = '/api'; // ← CHANGE TO THIS
+  const baseUrl = ''; // ← EMPTY STRING
   const imageUrl = images[currentIndex] ? `${baseUrl}${images[currentIndex]}` : 'https://via.placeholder.com/600x400?text=No+Image';
-
+  
   const handlePrev = () => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   const handleNext = () => setCurrentIndex((prev) => (prev + 1) % images.length);
 
