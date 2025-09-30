@@ -131,13 +131,13 @@ const CreateAd: React.FC = () => {
               <ErrorMessage name="carModelId" component="div" className="text-red-500 text-sm" />
             </div>
             <div>
-              <label htmlFor="Registreringsnummer" className="block text-sm font-medium text-gray-700">Registreringsnummer</label>
-              <Field
-                type="text"
-                name="Registreringsnummer"
-                className="mt-1 block w-full px-3 py-2 border rounded-md"
-              />
-              <ErrorMessage name="Registreringsnummer" component="div" className="text-red-500 text-sm" />
+                <label htmlFor="registrationNumber" className="block text-sm font-medium text-gray-700">Registreringsnummer</label>
+                <Field
+                  type="text"
+                  name="registrationNumber"  // ← CORRECT
+                  className="mt-1 block w-full px-3 py-2 border rounded-md"
+                />
+                <ErrorMessage name="registrationNumber" component="div" className="text-red-500 text-sm" />
             </div>
             <div>
               <label htmlFor="technicalData" className="block text-sm font-medium text-gray-700">Fordonsdata</label>
@@ -209,7 +209,7 @@ const CreateAd: React.FC = () => {
                 }}
                 className="mt-1 block w-full"
               />
-              <ErrorMessage name="bilder" component="div" className="text-red-500 text-sm" />
+              <ErrorMessage name="images" component="div" className="text-red-500 text-sm" />
             </div>
             {error && <div className="text-red-500 text-sm">{error}</div>}
             <button
